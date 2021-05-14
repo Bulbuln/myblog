@@ -1,0 +1,21 @@
+<nav>
+  <div class="site-title">
+    <a href="/"><h1>Bulbul Blog</h1></a>
+  </div>
+  <ul>
+    <% if(user) { %>
+
+      <li>Welcome <%= user.name %> </li>
+      <li><a href="/">Blogs</a></li>
+      <li><a href="/blogs/create-blog">New Blog</a></li>
+      <li><a href="/logout">Logout</a></li>
+    <% } else { %>
+
+      <li><a href="/">Blogs</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Signup</a></li>
+
+    <% } %>
+    
+  </ul>
+</nav>
