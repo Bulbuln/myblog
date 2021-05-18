@@ -28,20 +28,13 @@ const userSchema = new mongoose.Schema({
         validate: [isEmail, "please enter a valid email"]
         
     },
-    profile: {
-        type: String,
-        // required: true
-    },
     password: {
         type: String,
         required: [true, "please enter a password"],
-        minLength: [6, "your password too short"]
+        minLength: [6, "your password is too short"]
     },
     
-    resetPasswordLink: {
-        data: String,
-        default: ''
-    }
+
 }, {timestamp: true});
 
 

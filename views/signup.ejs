@@ -1,10 +1,10 @@
 <html lang="en">
 <%- include("./partials/head.ejs") %>
 
-<body>
+<body >
   <%- include("./partials/nav.ejs") %>
 
-  <div class="create-blog content">
+  <div class="signup-content">
     <form action="/signup" method="POST">
       <label for="title">Your Username</label>
       <input type="text" id="username" name="username" required>
@@ -18,7 +18,7 @@
       <label for="body">Your Password</label>
       <input type="password" id="password" name="password" required>
       <p class="password error"></p>
-      <button>Submit</button>
+      <button>Signup</button>
     </form>
   </div>
 

@@ -5,15 +5,15 @@
   <ul>
     <% if(user) { %>
 
-      <li>Welcome <%= user.name %> </li>
+      <li class="user">Welcome <%= user.name %> </li>
       <li><a href="/">Blogs</a></li>
       <li><a href="/blogs/create-blog">New Blog</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li class="signup-nav"><a href="/logout">Logout</a></li>
     <% } else { %>
 
       <li><a href="/">Blogs</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/signup">Signup</a></li>
+      <li class="login-nav"><a href="/login">Login</a></li>
+      <li class="signup-nav"><a href="/signup">Signup</a></li>
 
     <% } %>
     

@@ -9,6 +9,8 @@ exports.blogs = (req, res) =>  {
 
 }
 
+
+
 exports.blog_post = (req, res)=> {
     const blog = new Blog(req.body);
     console.log(req.body)
@@ -21,6 +23,26 @@ exports.blog_post = (req, res)=> {
     });
 }
 
-exports.blog_get = (req, res) =>  {
+exports.create_get = (req, res) =>  {
     res.render('create')
+}
+
+exports.blog_details = (req, res) => {
+  let id = req.params.id
+  Blog.findById(id)
+    .then (result => {
+      
+        res.render('details', {blog: result})
+    })
+}
+
+exports.blog_delete = (req, res) => {
+  let id = req.params.id
+  Blog.findByIdAndDelete(id)
+    .then(result => {
+      res.json({ redirect: '/blogs' });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
